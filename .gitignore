@@ -1,0 +1,8 @@
+
+*.o
+*.xcl
+*.pbi
+*.sim
+*.pbd
+*.browse
+*.linf
