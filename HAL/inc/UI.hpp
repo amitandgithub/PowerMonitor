@@ -22,52 +22,29 @@ namespace App
 class UI
 {
 public:
-	const static unsigned char NO_OF_MENUS_IN_UI = 1U;
-        constexpr static unsigned char NO_OF_SCREENS_IN_UI = 5U;
+	const static unsigned char NO_OF_MENUS_IN_UI = 10U;
+        constexpr static unsigned char NO_OF_SCREENS_IN_UI = 10U;
+        typedef uint8_t ScreenHandle_t;
 
 	UI(Nokia5110LCD* m_pNokiaLCD);
 	~UI(){};
-	bool Init();
-	void AddMenu(Menu& rMenu){Menus[0] = rMenu;}
-        
-        inline void AddScreen(Screen* pScreen ){m_aScreens[0] = pScreen;TotalRegisteredScreens++;}
-        inline void AddScreen(Screen* pScreen, unsigned char Slot ){m_aScreens[Slot%NO_OF_SCREENS_IN_UI] = pScreen; TotalRegisteredScreens++;}
-       // inline static void GoToPreviousScreen(){ if(ActiveScreen>0){PreviousActiveScreen = ActiveScreen; ActiveScreen -= 1 ;} } // --ActiveScreen %= TotalRegisteredScreens  
+	bool Init();        
+        inline ScreenHandle_t AddScreen(Screen* pScreen ){m_aScreens[TotalAddeedScreens%NO_OF_SCREENS_IN_UI] = pScreen; return TotalAddeedScreens++;}// ++TotalRegisteredScreens %= NO_OF_SCREENS_IN_UI ;}
+        inline void AddScreen(Screen* pScreen, unsigned char Slot ){m_aScreens[Slot%NO_OF_SCREENS_IN_UI] = pScreen;}// ++TotalRegisteredScreens %= NO_OF_SCREENS_IN_UI;}
         inline static void GoToPreviousScreen(){SetActiveScreen(PreviousActiveScreen);  }
         inline static void GoToNextScreen(){ PreviousActiveScreen = ActiveScreen; ++ActiveScreen %= TotalRegisteredScreens ; }
-        inline static unsigned char GetActiveScreen(){return ActiveScreen; }
-        inline static void SetActiveScreen(unsigned char ScreenNo){ PreviousActiveScreen = ActiveScreen; ActiveScreen = ScreenNo; }
-        //inline void DisplayScreen(){ m_pNokiaLCD->DrawBuffer( m_aScreens[ActiveScreen % NO_OF_SCREENS_IN_UI]->GetScreenTextArray() );}
-        inline void DisplayScreen(){ if(m_aScreens[ActiveScreen % NO_OF_SCREENS_IN_UI]) m_pNokiaLCD->DrawBuffer( m_aScreens[ActiveScreen % NO_OF_SCREENS_IN_UI]->GetScreenTextArray() );}
-        
+        inline static ScreenHandle_t GetActiveScreen(){return ActiveScreen; }
+        inline static void SetActiveScreen(ScreenHandle_t ScreenNo){ PreviousActiveScreen = ActiveScreen; ActiveScreen = ScreenNo; }
+        void DisplayScreen();//{ if(m_aScreens[ActiveScreen % NO_OF_SCREENS_IN_UI]) m_pNokiaLCD->DrawBuffer( m_aScreens[ActiveScreen % NO_OF_SCREENS_IN_UI]->GetScreenTextArray() );}
+       	inline void Run(){DisplayScreen();}
+        void EventHamdler(Screen::Event_t& rEvent);
 
-	void AddMenu(Menu& rMenu, unsigned char Slot){ Menus[Slot] = rMenu; }
-
-	bool DeleteMenu(unsigned char Slot){return true;}
-
-	void DisplayMenu(unsigned char Slot);
-
-	inline void Run(){DisplayScreen();}
-
-	void EventHamdler(Screen::Event_t& rEvent);
-
-	inline Menu& GetActiveMenu() {return Menus[ActiveMenu];}
-
-	inline void SetActiveMenu(unsigned char Slot) { ActiveMenu = (Slot % NO_OF_MENUS_IN_UI); }
-
-	inline void SetMenuLineTest(unsigned char Menu, unsigned char Line, unsigned char Col, const char* pText)
-	{
-		Menus[Menu % NO_OF_MENUS_IN_UI].SetLineText(Line,Col,pText);
-	}
-
-
-	Menu Menus[NO_OF_MENUS_IN_UI];
 private:
         Screen* m_aScreens[NO_OF_SCREENS_IN_UI];
-        static unsigned char ActiveScreen;
+        static ScreenHandle_t ActiveScreen;
         static unsigned char PreviousActiveScreen;
         static unsigned char TotalRegisteredScreens;
-	unsigned char ActiveMenu;
+        unsigned char TotalAddeedScreens;
 	Nokia5110LCD* m_pNokiaLCD;
 };
 

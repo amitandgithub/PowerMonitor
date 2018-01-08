@@ -48,7 +48,10 @@ void Led_PC13BlinkOnce(void);
 void Led_PC13Toggle(void);
 void Line0Menu0LongLongTouchHandler();
 void Line0Menu0LongTouchHandler();
-
+void Line5Menu0LongTouchHandler();
+void Line5MenuScreenLongTouchHandler();
+void Line2TanyaLongTouchHandler();
+void Line1AaravLongTouchHandler();
 } /* namespace App */
 
 #endif /* APP_UIAPP_HPP_ */

@@ -6,3 +6,6 @@
 *.pbd
 *.browse
 *.linf
+*.wsdt
+*.bat
+*.ps1

@@ -33,29 +33,45 @@ uint8_t aVoltage[9];
 float BusVoltage = 0.00;
 static INA219::Power_t Power;
 static Led Led_PC13(GPIOC,GPIO_Pin_13);
+static ControlScreen MenuScreen;
 static ControlScreen myControlScreen;
 static Screen PowerMonitorScreen;
+static Screen Aarav;
+static Screen Tanya;
+static UI::ScreenHandle_t MenuScreenHandle; 
+static UI::ScreenHandle_t myControlScreenHandle; 
+static UI::ScreenHandle_t AaravScreenHandle;
+static UI::ScreenHandle_t TanyaScreenHandle;
  void CreateUI()
  {
-    /*
-    HomeScreen.AddText( (char *)
-                       "Amit        "
-                       "Amit        "
-                       "Amit        "
-                       "Amit        "
-                       "Amit        "
-                       "Amit        "
+    
+    Aarav.AddText( (char *)
+                       "Aarav       "
+                       "Aarav       "
+                       "Aarav       "
+                       "Aarav       "
+                       "Aarav       "
+                       "Aarav       "
                        );
     
-    SecondScreen.AddText( (char *)
-                       "Sumit       "
-                       "Sumit       "
-                       "Sumit       "
-                       "Sumit       "
-                       "Sumit       "
-                       "Sumit       "
+    MenuScreen.AddText( (char *)
+                       " Menu1      "
+                       " Menu2      "
+                       " Menu3      "
+                       " Menu4      "
+                       " Menu5      "
+                       " Next Menu  "
+                       );    
+    
+    Tanya.AddText( (char *)
+                       "Tanya       "
+                       "Tanya       "
+                       "Tanya       "
+                       "Tanya       "
+                       "Tanya       "
+                       "Tanya       "
                        );
-    */
+    
     PowerMonitorScreen.AddText( (char *)
                        "<Live Power>"
                        "            "
@@ -67,13 +83,17 @@ static Screen PowerMonitorScreen;
     
     myControlScreen.AddText( (char *)
                        ">Live Power "
-                       " 1          "
-                       " 2          "
-                       " 3          "
-                       " 4          "
-                       " 5          "
+                       " Aarav,Avni "
+                       " Tanya,Dog  "
+                       " Rudransh,  "
+                       " Amit,sumit "
+                       " Next Menu  "
                        );
    myControlScreen.AddHandler(0,Line0Menu0LongTouchHandler,Line0Menu0LongLongTouchHandler);
+   myControlScreen.AddHandler(1,Line1AaravLongTouchHandler,Line0Menu0LongLongTouchHandler);
+   myControlScreen.AddHandler(2,Line2TanyaLongTouchHandler,Line0Menu0LongLongTouchHandler);
+   myControlScreen.AddHandler(5,Line5Menu0LongTouchHandler,nullptr);
+   MenuScreen.AddHandler(5,Line5MenuScreenLongTouchHandler,nullptr);
 
 
   HwButton_A2.HwInit();
@@ -87,10 +107,11 @@ static Screen PowerMonitorScreen;
   HwButton_A2.RegisterEventHandler(Bsp::HwButtonIntr::LongLongPress,static_cast<Bsp::HwButtonIntr::BtnHandler>(LongLongPressEvent));
   
   MyUI.Init();
-  MyUI.AddScreen(&PowerMonitorScreen,0);
- // MyUI.AddScreen(&HomeScreen,1);
- // MyUI.AddScreen(&SecondScreen,2);
-  MyUI.AddScreen(&myControlScreen,1);
+  MyUI.AddScreen(&PowerMonitorScreen);
+  AaravScreenHandle = MyUI.AddScreen(&Aarav);
+  TanyaScreenHandle = MyUI.AddScreen(&Tanya);
+  myControlScreenHandle = MyUI.AddScreen(&myControlScreen); 
+  MenuScreenHandle = MyUI.AddScreen(&MenuScreen);
   
  }
  void RunUI()
@@ -210,11 +231,27 @@ void LongLongPressEvent(void)
 	gEvent = Screen::LongLongTouch;
 }
 
-void Line0Menu0LongTouchHandler()
+void Line0Menu0LongTouchHandler() 
 {
   UI::SetActiveScreen(0);     
 }
 
+void Line1AaravLongTouchHandler() 
+{
+  UI::SetActiveScreen(AaravScreenHandle);     
+}
+void Line2TanyaLongTouchHandler() 
+{
+  UI::SetActiveScreen(TanyaScreenHandle);     
+}
+void Line5Menu0LongTouchHandler()
+{
+  UI::SetActiveScreen(MenuScreenHandle);     
+}
+void Line5MenuScreenLongTouchHandler()
+{
+  UI::SetActiveScreen(myControlScreenHandle);     
+}
 void Line0Menu0LongLongTouchHandler()
 {
 	Led_PC13.Toggle();

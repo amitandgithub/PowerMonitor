@@ -2417,16 +2417,7 @@
             <name>$PROJ_DIR$\HAL\src\Led.cpp</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\HAL\src\Line.cpp</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\src\Menu.cpp</name>
-        </file>
-        <file>
             <name>$PROJ_DIR$\HAL\src\Nokia5110LCD.cpp</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\src\Page.cpp</name>
         </file>
         <file>
             <name>$PROJ_DIR$\HAL\src\PortManager.cpp</name>

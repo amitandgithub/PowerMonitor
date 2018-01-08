@@ -28,14 +28,13 @@ bool UI::Init()
 {
 	m_pNokiaLCD->HwInit();
 	m_pNokiaLCD->DrawLine(0, 0, "Initializing");
+        TotalAddeedScreens = 0;
+        for(uint8_t i = 0; i < NO_OF_SCREENS_IN_UI; i++)
+        {
+          m_aScreens[i] = nullptr;
+        }
+        
 	return true;
-}
-void UI::DisplayMenu(unsigned char Slot)
-{
-	if( Slot <= NO_OF_MENUS_IN_UI)
-	{
-		m_pNokiaLCD->DrawBuffer(Menus[Slot].GetMenuAddress() );
-	}
 }
 
 void UI::EventHamdler(Screen::Event_t& rEvent)
@@ -47,6 +46,18 @@ void UI::EventHamdler(Screen::Event_t& rEvent)
 	}
 }
 
+void UI::DisplayScreen()
+{ 
+  if(m_aScreens[ActiveScreen % NO_OF_SCREENS_IN_UI]) 
+  {
+      m_pNokiaLCD->DrawBuffer( m_aScreens[ActiveScreen % NO_OF_SCREENS_IN_UI]->GetScreenTextArray() );
+  }
+  else
+  {
+    if(m_aScreens[0])
+      m_pNokiaLCD->DrawBuffer( m_aScreens[0]->GetScreenTextArray() );
+  }
+}
 
 
 
