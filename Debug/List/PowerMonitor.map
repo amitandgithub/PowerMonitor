@@ -1,72 +1,72 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.20.1.14183/W32 for ARM                08/Jan/2018  22:00:15
+# IAR ELF Linker V8.20.1.14183/W32 for ARM                10/Jan/2018  19:02:36
 # Copyright 2007-2017 IAR Systems AB.
 #
 #    Output file  =  
-#        C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Exe\PowerMonitor.out
+#        C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Exe\PowerMonitor.out
 #    Map file     =  
-#        C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\List\PowerMonitor.map
+#        C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\List\PowerMonitor.map
 #    Command line =  
-#        -f C:\Users\AMITCH~1\AppData\Local\Temp\EW4739.tmp ("C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\ClockManager.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\ControlScreen.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\Gpio.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\GpioInput.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\GpioOutput.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\HwButton.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\HwButtonIntr.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\I2c.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\I2CDriver.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\INA219.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\InterruptManager.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\Led.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\main.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\misc.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\Nokia5110LCD.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\PortManager.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\Queue.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\Screen.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\SpiDriver.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\startup_stm32f10x_md.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\stm32f10x_exti.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\stm32f10x_gpio.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\stm32f10x_i2c.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\stm32f10x_it.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\stm32f10x_rcc.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\stm32f10x_spi.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\stm32f10x_usart.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\system_stm32f10x.o"
-#        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\SysTickTimer.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\UI.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\UIApp.o"
-#        -o "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Exe\PowerMonitor.out"
+#        -f C:\Users\AMITCH~1\AppData\Local\Temp\EW57BE.tmp ("C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\ClockManager.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\ControlScreen.o"
+#        "C:\Users\Amit Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\Gpio.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\GpioInput.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\GpioOutput.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\HwButton.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\HwButtonIntr.o"
+#        "C:\Users\Amit Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\I2c.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\I2CDriver.o"
+#        "C:\Users\Amit Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\INA219.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\InterruptManager.o"
+#        "C:\Users\Amit Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\Led.o"
+#        "C:\Users\Amit Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\main.o"
+#        "C:\Users\Amit Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\misc.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\Nokia5110LCD.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\PortManager.o"
+#        "C:\Users\Amit Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\Queue.o"
+#        "C:\Users\Amit Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\Screen.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\SpiDriver.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\startup_stm32f10x_md.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\stm32f10x_exti.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\stm32f10x_gpio.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\stm32f10x_i2c.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\stm32f10x_it.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\stm32f10x_rcc.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\stm32f10x_spi.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\stm32f10x_usart.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\system_stm32f10x.o"
+#        "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\SysTickTimer.o"
+#        "C:\Users\Amit Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\UI.o"
+#        "C:\Users\Amit Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj\UIApp.o"
+#        -o "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\Exe\PowerMonitor.out"
 #        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
-#        --map "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\List\PowerMonitor.map"
+#        --map "C:\Users\Amit
+#        Chaudhary\Desktop\IAR\PowerMonitor\Debug\List\PowerMonitor.map"
 #        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
 #        8.0\arm\config\linker\ST\stm32f103x8.icf" --semihosting --entry
 #        __iar_program_start --vfe --text_out locale)
@@ -404,7 +404,7 @@ Extra (__iar_cstart_call_ctors)
 
     Module                  ro code  ro data  rw data
     ------                  -------  -------  -------
-C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj: [1]
+C:\Users\Amit Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj: [1]
     ClockManager.o              106                 5
     ControlScreen.o             380       24
     GpioInput.o                 798       52
@@ -837,10 +837,10 @@ Bsp::InterruptManager::m_WWDG_IRQHandler
                         0x200004a8    0x4  Data  Gb  InterruptManager.o [1]
 Bsp::InterruptManager::m_pInterruptManager
                         0x20000480    0x4  Data  Gb  InterruptManager.o [1]
-Bsp::Peripheral::GetClockManager()
-                        0x08000eb9    0x8  Code  Gb  SpiDriver.o [1]
 Bsp::Peripheral::GetInterruptManager()
                         0x080035d1    0x8  Code  Gb  GpioInput.o [1]
+Bsp::PeripheralBase::GetClockManager()
+                        0x08000eb9    0x8  Code  Gb  SpiDriver.o [1]
 Bsp::Screen::AddText(char *)
                         0x0800239f    0xe  Code  Gb  Screen.o [1]
 Bsp::Screen::EventHandler(Bsp::Screen::Event_t)
@@ -1060,7 +1060,7 @@ main                    0x0800399d   0x18  Code  Gb  main.o [1]
 next_abi_dtor_rec       0x2000057c    0x4  Data  Lc  cppinit.o [3]
 
 
-[1] = C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj
+[1] = C:\Users\Amit Chaudhary\Desktop\IAR\PowerMonitor\Debug\Obj
 [2] = command line
 [3] = dl7M_tln.a
 [4] = dlpp7M_tl_nc.a

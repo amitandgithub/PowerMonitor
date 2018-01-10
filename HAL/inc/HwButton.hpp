@@ -13,7 +13,11 @@
 
 namespace Bsp
 {
-
+/* New Button Class Improvements : 10 Jan 2018 
+  1. Touch generates 50 milli sec events
+  2. Touch events stored in event Queue 
+     for the application to read.
+*/ 
 class HwButton : public GpioInput
 {
 public:

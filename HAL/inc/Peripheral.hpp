@@ -8,6 +8,7 @@
 #ifndef APP_INC_PERIPHERAL_HPP_
 #define APP_INC_PERIPHERAL_HPP_
 
+#include"PeripheralBase.h"
 #include"ClockManager.hpp"
 #include"PortManager.hpp"
 #include"InterruptManager.hpp"
@@ -16,11 +17,11 @@ namespace Bsp
 {
 
 
-class Peripheral
+  class Peripheral : protected PeripheralBase
 {
 protected:
 	Peripheral(){};
-	virtual~Peripheral(){}
+	virtual~Peripheral(){};
 	virtual bool HwInit() = 0;
 	virtual bool HwConfig(void* pConfigStruct);
 	virtual void HwEnable();
@@ -30,8 +31,8 @@ protected:
 	virtual bool HwEnableInterrupt(uint32_t InterruptNo);
 	virtual bool HwDisableInterrupt(uint32_t InterruptNo);
 	virtual bool HwClearInterrupt(uint32_t InterruptNo);
-	inline ClockManager*     GetClockManager()    { return ClockManager::GetInstance();}
-	inline PortManager*      GetPortManager ()    { return PortManager::GetInstance();}
+	//inline ClockManager*     GetClockManager()    { return ClockManager::GetInstance();}
+	//inline PortManager*      GetPortManager ()    { return PortManager::GetInstance();}
 	inline InterruptManager* GetInterruptManager(){ return InterruptManager::GetInstance();}
 };
 
